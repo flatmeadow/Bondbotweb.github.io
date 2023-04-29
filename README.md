@@ -1,2 +1,2 @@
-# Bondbotweb.github.io
+# Bondbot
 a Bondbot static website
