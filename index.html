@@ -4,106 +4,145 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="main.js"></script>
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles.css">
         <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='responsive.css') }}"> -->
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <title>BondBot</title>
+
+        <script>
+          $(document).ready(function () {
+            // Initialize the navbar component
+            $('.navbar-toggler').click(function () {
+              $('.navbar-collapse').toggleClass('show');
+            });
+          });
+        </script>
     </head>
 
     <body>
-        <header>
-            <div class="header-container">
-                <h1>BondBot</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">BONDBOT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="bots.html">Bots</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+              </ul>
             </div>
-        </header>
-
-        <section class="main-section">
-            <div class="left-content">
-                <h1 class="header-title" style="color: #38B6FF"><i>BONDBOT</i></h1>
-                <h1 class="header-title" style="color: #263F6B"><i>SYSTEM</i></h1>
-                <ul class="bullet-list">
-                    <li>New product development</li>
-                    <li>Faster performance</li>
-                    <li>A lot of features</li>
-                    <li>Intelligent Chatbots</li>
-                </ul>
+          </div>
+        </nav>
+    </header>
+    
+    <section id="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1><span class="text-primary" style="color: #fff !important">BONDBOT</span></h1>
+              <p class="text-secondary" style="color: #000000 !important">Discover intelligent chatbots that can be use on personal facebook accounts!</p>
             </div>
-
-            <div class="right-content">
-                <div class="circle">
-                    <img src="assets/main-1.png" alt="Shiori Nama">
-                </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image">
+              <img src="https://via.placeholder.com/500x500" alt="Hero Image">
             </div>
-        </section>
-
-        <section class="information-section">
-            <div class="info-left">
-              <h2 class="info-header">Use Bots on Facebook!</h2>
-              <div class="info-image">
-                <img src="assets/main-2.png" alt="Image">
-                <div class="info-image-shadow"></div>
-              </div>
-              <button class="info-button" onclick="alert('This feature is not ready yet!')">Build your Chatbots</button>
-            </div>
-            <div class="info-right">
-              <h2 class="info-header">BondBot System Ready</h2>
-              <p class="info-paragraph">Building chatbots on personal Facebook Accounts</p>
-              <button class="info-button" onclick="location.href='showcase.html'">Try Now!</button>
-            </div>
-        </section>
-
-        <div class="carousel-container">
-            <h2 class="carousel-header">Features</h2>
-            <div class="carousel">
-              <div class="carousel-item">
-                <div class="carousel-box">
-                  <img src="assets/feature-1.png" alt="Feature 1">
-                  <h3>Personalized Voice</h3>
-                  <audio controls>
-                    <source src="assets/audio1.wav" type="audio/wav">
-                  </audio>
-                  <p style="height: 117px;">With our service, you can personalize your chatbot's voice. Using the prefix /say, your chatbot will perform text-to-speech
-                    with a voice that is unique to you. Imagine having a chatbot that not only responds to your commands but also speaks to you
-                    in a personalized voice that you've chosen. It's a whole new level of personalization and convenience.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-box">
-                  <img src="assets/feature-2.png" alt="Feature 2">
-                  <h3>Personalized Characters</h3>
-                  <p>Our chatbots are not just bots; they have personalities that can match yours. You can chat with our chatbots and get a vibe
-                    that suits your personality. With our service, you can personalize your chatbot to be your virtual friend. With every chat,
-                    you will feel like you are talking to a friend, not just a machine.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-box">
-                  <img src="assets/feature-3.png" alt="Feature 3">
-                  <h3>Play Music and Videos</h3>
-                  <p>Our chatbot service offers an exciting feature that allows you to play your favorite music or videos. By simply using the prefix
-                    /play and /ytsearch, your chatbot will perform the task and send you the required object, whether it's a song or a video. It's a
-                    great way to stay entertained and informed without having to leave your chat.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="carousel-box">
-                  <img src="assets/feature-4.png" alt="Feature 3">
-                  <h3>Useful Commands</h3>
-                  <p>Our chatbot service offers a vast array of commands that are available for you to use. Whether you need help with scheduling,
-                    reminders, or even jokes, our chatbots have got you covered. Just say there are tons of commands to be used inside the bot,
-                    and you will be amazed at the things our chatbots can do for you. With our chatbots, you will never run out of helpful commands
-                    to make your life easier.</p>
-                </div>
-              </div>
-            </div>
+          </div>
         </div>
-          
+      </div>
+    </section>
+    
+    <section class="info-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 info-left">
+            <div class="info-item">
+              <div class="info-img">
+                <img src="your-image-url" alt="Information Image">
+              </div>
+              <div class="info-text">
+                <h2 class="info-title">Use Bots on Facebook!</h2>
+                <p class="info-para">Our chatbot feature is designed to be intelligent and intuitive, making your conversations feel more natural and seamless. With advanced AI technology, our chatbots can understand and respond to your queries in real-time, providing you with the best possible experience on the messenger platform.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 info-right">
+            <div class="info-item">
+              <div class="info-text">
+                <h2 class="info-title">One File System</h2>
+                <p class="info-para">Making it easy to set up. No more complicated and we had web UI inside. Our chatbot feature is easy to set up and use, thanks to our one-file system. Gone are the days of complicated and confusing installations. With our chatbot file, you can get up and running in no time, so you can focus on what really matters - engaging with your audience.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+              <div class="info-img">
+                <img src="your-image-url" alt="Information Image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="features-section py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title text-center mb-5">Features</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="feature-carousel d-flex flex-row align-items-center">
+              <div class="feature-item mx-3">
+                <img src="../static/assets/feature-1.png" alt="Feature 1" class="img-fluid rounded-circle mb-3">
+                <h4 class="text-center mb-2">Personalized Voice</h4>
+                <p class="text-center mb-4">Our chatbot feature comes with a personalized voice that is tailored to your liking. Say goodbye to generic robot voices and hello to a chatbot that speaks to you in a way that feels authentic and engaging.</p>
+                <audio controls src="../static/assets/audio1.wav"></audio>
+              </div>
+              <div class="feature-item mx-3 smaller">
+                <img src="../static/assets/feature-2.png" alt="Feature 2" class="img-fluid rounded-circle mb-3">
+                <h4 class="text-center mb-2">Personalized Characters</h4>
+                <p class="text-center mb-4">We believe that chatbots should be more than just text on a screen. That's why our chatbot feature allows you to choose from a variety of personalized characters to represent your chatbot. Each character is unique and has its own style, adding an extra layer of personality to your conversations.</p>
+              </div>
+              <div class="feature-item mx-3 smaller">
+                <img src="../static/assets/feature-3.png" alt="Feature 3" class="img-fluid rounded-circle mb-3">
+                <h4 class="text-center mb-2">Play Medias</h4>
+                <p class="text-center mb-4"> With our chatbot feature, you can now play music and video directly on the messenger platform. Whether you want to listen to your favorite songs or watch a funny video with your chatbot, you can do it all seamlessly without ever having to leave the conversation.</p>
+              </div>
+              <div class="feature-item mx-3 smaller">
+                <img src="../static/assets/feature-4.png" alt="Feature 4" class="img-fluid rounded-circle mb-3">
+                <h4 class="text-center mb-2">Useful Commands</h4>
+                <p class="text-center mb-4">Our chatbot feature is equipped with a variety of useful commands that make your conversations more productive and efficient. From setting reminders to checking the weather, our chatbot can help you with a variety of tasks, saving you time and hassle.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="text-center">© 2023, flatmeadow</p>
+      </div>
+    </footer>
+    
+      
+      
     </body>
 </html>
